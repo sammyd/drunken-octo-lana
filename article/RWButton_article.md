@@ -14,6 +14,8 @@ button can be used to trigger actions in your app.
 - [Useful Properties](#useful-properties)
   + [Enabled](#enabled)
 
+![Buttons](img/buttons.png)
+
 ## Button Types
 
 Within Android, there are four main button "types".
