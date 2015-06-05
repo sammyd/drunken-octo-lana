@@ -5,7 +5,7 @@ button can be used to trigger actions in your app.
 
 - [Button Types](#button-types)
   + [Text](#text)
-  + [Image][#image]
+  + [Image](#image)
   + [Image & Text](#image--text)
   + [Floating Action Button](#floating-action-button)
 - [Creating a button from code](#creating-a-button-from-code)
@@ -330,7 +330,7 @@ In code, the `setEnabled()` method takes a `boolean`:
 
 ```java
 Button addButton = (Button)findViewById(R.id.button_add_button);
-addButton.setEnabled(enabled);
+addButton.setEnabled(true);
 ```
 
 
