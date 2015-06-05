@@ -51,7 +51,7 @@ the `android:src` attribute. This should be some form of a `@drawable`:
 
 You've seen text buttons, and image buttons - but what you really want is both:
 
-![Image and Text](image/text_image_button.png)
+![Image and Text](img/text_image_button.png)
 
 Luckily, this is made possible through the "drawable" functionality of the
 `TextView` superclass of `Button`:
@@ -104,10 +104,8 @@ You can then use the `FloatingActionButton` class:
 
 ```xml
 <android.support.design.widget.FloatingActionButton
-  <!-- Workaround -->
   xmlns:app="http://schemas.android.com/apk/res-auto"
   app:borderWidth="0dp"
-  <!-- End workaround -->
   android:layout_width="wrap_content"
   android:layout_height="wrap_content"
   android:layout_marginBottom="16dp"
