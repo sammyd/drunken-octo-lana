@@ -1,12 +1,13 @@
 package com.raywenderlich.rwbutton;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
 
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     newButton.setText("Magic Button");
     // Set the layout params
     LayoutParams layoutParams = new LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
+    layoutParams.gravity = Gravity.CENTER_HORIZONTAL;
     newButton.setLayoutParams(layoutParams);
 
     // Add the button to the view
