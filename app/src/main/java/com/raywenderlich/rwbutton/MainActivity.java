@@ -20,6 +20,19 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+    Button removeButton = (Button)findViewById(R.id.button_remove_button);
+    removeButton.setOnClickListener(new android.view.View.OnClickListener() {
+      @Override
+      public void onClick(android.view.View v) {
+        // Remove button
+        LinearLayout buttonContainer = (LinearLayout)findViewById(R.id.button_container);
+        buttonContainer.removeView(newButton);
+        newButton = null;
+        // Update the +/- buttons
+        enableButtonAdding(true);
+      }
+    });
   }
 
   @Override
