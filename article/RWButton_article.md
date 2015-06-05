@@ -157,6 +157,95 @@ available to you in code, check out details on `TextView`.
 
 ## Button Styling
 
+Styling buttons is in line with styling other UI components on Android. They
+will respect the theme of the app, in addition to their own `style` attributes.
+
+There is one style that is particularly applicable to buttons - used to create a
+borderless button:
+
+![Borderless Button](img/borderless_button.png)
+
+This is created as follows:
+
+```xml
+<Button
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="Borderless"
+  style="?android:borderlessButtonStyle" />
+```
+
+You can also create your own styles, defining them in the __res/values/__
+resources directory.
+
+![Custom Style](img/custom_style_button.png)
+
+For example, the following is a custom style definition:
+
+```xml
+<style name="CustomButton" parent="Base.Widget.AppCompat.Button.Borderless">
+  <item name="android:textAllCaps">false</item>
+  <item name="android:textColor">#F23E2E</item>
+  <item name="android:typeface">monospace</item>
+  <item name="android:background">#aaf</item>
+  <item name="android:padding">10dp</item>
+</style>
+```
+
+This is invoked as follows:
+
+```xml
+<Button
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="Custom Style"
+  style="@style/CustomButton" />
+```
+
+The one remaining commonly used styling feature is the ability to change the
+color or background of a button based on whether or not it is being pressed.
+
+For example, the left image shows the button in its default state, whilst the
+right image shows it whilst it's being pressed:
+
+![Default Button](img/multicolor_button_1.png)
+![Pressed Button](img/multicolor_button_2.png)
+
+This is achieved using a `ColorStateList`, although if you want to change the
+background image, you can do the same with a `StateListDrawable`.
+
+You define a `ColorStateList` in the __res/color__ resources directory:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:color="#F23E2E"
+        android:state_focused="true" />
+  <item android:color="#F2D43D"
+        android:state_pressed="true" />
+  <item android:color="#2EA629" />
+</selector>
+```
+
+This consists of a list of `item` tags, each of which define a color and a
+_state_ associated with that color. There are many different states - here the
+important state is `android:state_pressed`, which refers to when the user has
+their finger on the button.
+
+The final item in the list specifies the default color. Think of the list as a
+fall-through matching list - the default color will only be matched if none of
+the previous items are.
+
+Using this on your button is simple:
+
+```xml
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="MultiColor"
+    android:backgroundTint="@color/multicolor_button" />
+```
+
 
 ## Handling Button Taps
 
