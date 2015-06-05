@@ -301,3 +301,25 @@ common to implement this inline as above.
 
 ## Useful Properties
 
+### Enabled
+
+The `enabled` property allows you to specify whether or not a button should
+respond to taps. In XML it's a attribute on the `<Button>` element:
+
+```xml
+<Button
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="-"
+  android:id="@+id/button_remove_button"
+  android:enabled="false"/>
+```
+
+In code, the `setEnabled()` method takes a `boolean`:
+
+```java
+Button addButton = (Button)findViewById(R.id.button_add_button);
+addButton.setEnabled(enabled);
+```
+
+
