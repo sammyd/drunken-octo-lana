@@ -7,7 +7,7 @@ button can be used to trigger actions in your app.
   + [Text](#text)
   + [Image](#image)
   + [Image & Text](#image--text)
-  + [Floating Action Button](#floating-action-button)
+  + [Floating Action Button](#floating-action-button-fab)
 - [Creating a button from code](#creating-a-button-from-code)
 - [Button Styling](#button-styling)
 - [Handling Button Taps](#handling-button-taps)
@@ -134,7 +134,7 @@ icon as a `@drawable` to the `android:src` attribute.
 
 The `android.support.design:fabSize` attribute can be `normal` or `mini`.
 
-## Creating Button from Code
+## Creating a Button from Code
 
 In code, the `Button` class represents push buttons. The following creates a
 simple text button:
