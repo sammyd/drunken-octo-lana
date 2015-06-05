@@ -9,8 +9,71 @@
                 tools:context=".MainActivity">
 
   <TextView
-      android:text="@string/hello_world"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content"/>
+      android:layout_height="wrap_content"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:text="Button Demos"
+      android:id="@+id/textView"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"/>
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="60dp"
+      android:id="@+id/button_container">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vanilla Button"
+        android:id="@+id/vanilla_button"
+        android:layout_gravity="center_horizontal"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/raywenderlich"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Text and Image"
+        android:id="@+id/imageWithTextButton"
+        android:drawableStart="@mipmap/raywenderlich"
+        android:drawableLeft="@mipmap/raywenderlich"
+        android:drawablePadding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="+"
+          android:id="@+id/button_add_button"
+          android:onClick="addButton"/>
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="-"
+          android:id="@+id/button_remove_button"
+          android:enabled="false"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
 
 </RelativeLayout>
