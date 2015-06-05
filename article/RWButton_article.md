@@ -125,6 +125,35 @@ The `android.support.design:fabSize` attribute can be `normal` or `mini`.
 
 ## Creating Button from Code
 
+In code, the `Button` class represents push buttons. The following creates a
+simple text button:
+
+```java
+// 1:
+newButton = new Button(this);
+// 2:
+newButton.setText("Magic Button");
+// 3:
+LayoutParams layoutParams = new LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
+layoutParams.gravity = Gravity.CENTER_HORIZONTAL;
+newButton.setLayoutParams(layoutParams);
+
+// 4:
+LinearLayout buttonContainer = (LinearLayout)findViewById(R.id.button_container);
+buttonContainer.addView(newButton);
+```
+
+1. Creating a button calls a constructor that requires a `Context`. This code is
+within an activity, so `this` is the appropriate context.
+2. The `setText()` method is used to configure the button.
+3. (Implementation detail) This button will live within a `LinearLayout`, so
+the layout parameters are an instance of `LinearLayout.LayoutParams`. Setting
+the params on the button uses the `setLayoutParams()` method.
+4. `Button` is an indirect subclass of `View`, so it is added to the layout
+using the `addView()` method.
+
+`Button` is a subclass of `TextView`, so for more details on the methods
+available to you in code, check out details on `TextView`.
 
 ## Button Styling
 
