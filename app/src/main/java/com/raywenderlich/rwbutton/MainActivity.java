@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
@@ -22,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
     Button removeButton = (Button)findViewById(R.id.button_remove_button);
-    removeButton.setOnClickListener(new android.view.View.OnClickListener() {
+    removeButton.setOnClickListener(new View.OnClickListener() {
       @Override
-      public void onClick(android.view.View v) {
+      public void onClick(View v) {
         // Remove button
         LinearLayout buttonContainer = (LinearLayout)findViewById(R.id.button_container);
         buttonContainer.removeView(newButton);
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     return super.onOptionsItemSelected(item);
   }
 
-  public void addButton(android.view.View view) {
+  public void addButton(View view) {
     // Create a new button
     newButton = new Button(this);
     // Set some attributes

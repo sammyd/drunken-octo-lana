@@ -249,6 +249,55 @@ Using this on your button is simple:
 
 ## Handling Button Taps
 
+There are two approaches to handling button taps. You can add a click handler to
+the `<Button>` element with the `android:onClick` attribute:
+
+```xml
+<Button
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="+"
+  android:id="@+id/button_add_button"
+  android:onClick="addButton"/>
+```
+
+The value associated with the attribute must be the name of a method on the
+respective activity. This needs to be a `public` method with a`void` return
+type that accepts a single `View` parameter.
+
+> __Note:__ If you specify the method name in the XML first, then Android Studio
+> can generate the appropriate method in the activity for you.
+
+```java
+public void addButton(View view) {
+  ...
+}
+```
+
+The alternative approach is to create an `OnClickListener` in code. This can be
+useful if you need to declare the handler inside a `Fragment` subclass.
+
+You need to create a `View.OnClickListener` class and assign it to the button
+using the `setOnClickListener()` method:
+
+```java
+Button removeButton = (Button)findViewById(R.id.button_remove_button);
+removeButton.setOnClickListener(new View.OnClickListener() {
+  @Override
+  public void onClick(View v) {
+    // Click handling code in here
+  }
+});
+```
+
+`OnClickListener` has just one method to override - `onClick()`, which has the
+same signature as the click handler you created for the XML approach. It's
+common to implement this inline as above.
+
+> __Note:__ Since `OnClickListener` is essentially a lambda or closure class,
+> Android Studio is able to display it in a more compact form:
+> ![Android Studio Lambda](img/as_lambda.png)
+
 
 ## Useful Properties
 
