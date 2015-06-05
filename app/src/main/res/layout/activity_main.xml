@@ -60,6 +60,32 @@
       <Button
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:text="Borderless"
+          style="?android:borderlessButtonStyle" />
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Custom Style"
+          style="@style/CustomButton" />
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="MultiColor"
+          android:backgroundTint="@color/multicolor_button" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
           android:text="+"
           android:id="@+id/button_add_button"
           android:onClick="addButton"/>

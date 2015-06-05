@@ -5,4 +5,11 @@
     <!-- Customize your theme here. -->
   </style>
 
+  <style name="CustomButton" parent="Base.Widget.AppCompat.Button.Borderless">
+    <item name="android:textAllCaps">false</item>
+    <item name="android:textColor">#F23E2E</item>
+    <item name="android:typeface">monospace</item>
+    <item name="android:background">#aaf</item>
+    <item name="android:padding">10dp</item>
+  </style>
 </resources>
