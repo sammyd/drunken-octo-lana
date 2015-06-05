@@ -3,6 +3,17 @@
 Buttons are the simplest UI widget that allows user interaction. Taps of the
 button can be used to trigger actions in your app.
 
+- [Button Types](#button-types)
+  + [Text](#text)
+  + [Image][#image]
+  + [Image & Text](#image--text)
+  + [Floating Action Button](#floating-action-button)
+- [Creating a button from code](#creating-a-button-from-code)
+- [Button Styling](#button-styling)
+- [Handling Button Taps](#handling-button-taps)
+- [Useful Properties](#useful-properties)
+  + [Enabled](#enabled)
+
 ## Button Types
 
 Within Android, there are four main button "types".
